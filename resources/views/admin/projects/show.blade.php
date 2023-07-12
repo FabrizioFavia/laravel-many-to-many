@@ -12,6 +12,11 @@
                                 <img class="projImg" src="{{ $project->image }}" alt="">
                                 <p>{{$project->description}}</p>
                             </div>
+                            <div>
+                                @foreach ($project->technologies as $technology)
+                                <span class="badge bg-primary">{{$technology->name}}</span>
+                                @endforeach
+                            </div>
                         </div>
                     </div>
         </div>

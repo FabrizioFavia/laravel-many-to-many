@@ -38,10 +38,10 @@
 
                 <p class="mb-3 fs-6">Seleziona le tecnologie utilizzate nel progetto</p>
                 <div class="mb-3 d-flex w-25">
-                    @foreach ($technologies as $technology)
+                    @foreach ($technologies as $i=>$technology)
                         <div class="form-check me-5 my-3">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
+                            <input class="form-check-input" type="checkbox" value="{{$technology->id}}" id="technologies{{$i}}" name="technologies[]">
+                            <label for="technologies{{$i}}" class="form-check-label" for="flexCheckDefault">
                                 {{$technology->name}}
                             </label>
                         </div>
