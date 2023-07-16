@@ -19,7 +19,7 @@ class ProjectSeeder extends Seeder
         foreach ($projects as $project) {
             $newProject = new Project();
             $newProject->title = $project['title'];
-            $newProject->image = $project['image'];
+            $newProject->image = 'placeholders/placeholder.png';
             $newProject->description = $project['description'];
             $newProject->type_id = $project['type_id'];
             $newProject->save();

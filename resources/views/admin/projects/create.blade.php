@@ -15,7 +15,7 @@
                 </div>
             @endif
 
-            <form class="form-control needs-validation p-2" action="{{ route('admin.projects.store') }}" method="post">
+            <form class="form-control needs-validation p-2" action="{{ route('admin.projects.store') }}" method="post" enctype="multipart/form-data">
                 @csrf
 
 
@@ -30,8 +30,8 @@
                 </div>
 
                 <div class="mb-3">
-                    <label class="mb-1 fs-6" for="image">URL immagine</label>
-                    <input type="text" name="image" id="image" value="{{ old('image') }}" class="form-control">
+                    <label class="mb-1 fs-6" for="image">Carica un'immagine</label>
+                    <input type="file" name="image" id="image" class="form-control">
                 </div>
                 {{-- FORM CHECK --}}
 
